@@ -49,6 +49,19 @@ function getData(){
   
 }
 
+
+const signout = () => {
+    firebase.auth().signout()
+        .then(() => {
+           localStorage.clear("uid",user.user.email)
+            window.location = "index.html"
+  
+        })
+        .catch(() => {
+  
+        })
+  }
+
 // const signout = () => {
 //         firebase.auth().signout()
 //             .then(() => {
